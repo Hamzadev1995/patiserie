@@ -33,54 +33,58 @@ const Apropos = () => {
           />
         </section>
 
-        <main 
-  className="relative w-full -mx-[50vw] left-[50%] right-[50%]"
-  style={{ 
-    backgroundImage: `
-      linear-gradient(to right, rgba(25, 248, 237, 0.9), rgba(25, 248, 237, 0.9)),
-      url(${image100})
-    `,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundBlendMode: 'luminosity', // Désature l'image
-    filter: 'sepia(100%) hue-rotate(10deg) saturate(0%)', // Effet beige et désaturation
-    backgroundColor: '#FCF8ED', // Couleur beige de base
-    padding: '4rem 0' // Espacement vertical
-  }}
->
-  <div className="container mx-auto px-4 max-w-4xl">
-    <div className="relative">
-      <div className="relative space-y-8">
-        <h1 className="text-4xl md:text-5xl text-center mb-12" style={{ fontFamily: 'Satisfy, cursive' }}>
-          <i>À propos de moi</i>
-        </h1>
-        {/* Texte d'arrière-plan */}
-        <div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-6xl text-brown-600 opacity-10"
-          style={{ fontFamily: 'Satisfy, cursive' }}
-        >
-          éveiller vos papilles
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <p className="text-gray-700 leading-relaxed mb-4 text-sm">
-            Il existe une légende qui raconte l'histoire d'une jeune âme qui visitait la cuisine de sa grand-mère chaque dimanche. L'air était chargé de l'odeur de la vanille, du beurre et de l'amour. C'est là que la passion pour les pâtisseries a commencé, où des ingrédients simples se transformaient en rêves comestibles. Ce petit garçon est devenu, des années plus tard, un maître des arts pâtissiers français, après une décennie de dévouement et d'apprentissage auprès des meilleurs chefs pâtissiers de Paris.
-          </p>
-          <p className="text-gray-700 leading-relaxed mb-4 text-sm">
-            Chaque pâtisserie qui sort de notre cuisine est un témoignage de ce parcours - un mélange de techniques traditionnelles et d'innovation moderne. Nous croyons que chaque dessert raconte une histoire, et nous sommes ici pour partager la nôtre avec vous. Notre engagement envers des ingrédients de qualité et un savoir-faire artisanal se reflète dans chaque création.
-          </p>
-        </div>
-        <div className="text-right mt-12">
-          <div
-            className="inline-block font-satisfy text-3xl italic text-brown-800"
-            style={{ fontFamily: 'Satisfy, cursive' }}
-          >
-            Chef Pâtissier
+        <main
+      className="relative w-full -mx-[50vw] left-[50%] right-[50%]"
+      style={{
+        backgroundImage: `
+          linear-gradient(to right, rgba(252, 248, 237, 0.85), rgba(252, 248, 237, 0.85)),
+          url(${image100})
+        `,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundBlendMode: 'soft-light',
+        backgroundColor: '#FCF8ED',
+        padding: '4rem 0'
+      }}
+    >
+      <div className="container mx-auto px-4 max-w-4xl bg-transparent">
+        <div className="relative">
+          <div className="relative space-y-8">
+            <h1 
+              className="text-4xl md:text-5xl text-center mb-12" 
+              style={{ fontFamily: 'Satisfy, cursive' }}
+            >
+              <i>À propos de moi</i>
+            </h1>
+            
+            <div
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-6xl  opacity-10"
+              style={{ fontFamily: 'Satisfy, cursive',color: '#8B4513'  }}
+            >
+              éveiller vos papilles
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <p className="text-gray-700 leading-relaxed mb-4 text-sm">
+                Il existe une légende qui raconte l'histoire d'une jeune âme qui visitait la cuisine de sa grand-mère chaque dimanche. L'air était chargé de l'odeur de la vanille, du beurre et de l'amour. C'est là que la passion pour les pâtisseries a commencé, où des ingrédients simples se transformaient en rêves comestibles. Ce petit garçon est devenu, des années plus tard, un maître des arts pâtissiers français, après une décennie de dévouement et d'apprentissage auprès des meilleurs chefs pâtissiers de Paris.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4 text-sm">
+                Chaque pâtisserie qui sort de notre cuisine est un témoignage de ce parcours - un mélange de techniques traditionnelles et d'innovation moderne. Nous croyons que chaque dessert raconte une histoire, et nous sommes ici pour partager la nôtre avec vous. Notre engagement envers des ingrédients de qualité et un savoir-faire artisanal se reflète dans chaque création.
+              </p>
+            </div>
+            
+            <div className="text-right mt-12">
+              <div
+                className="inline-block font-satisfy text-3xl italic text-brown-800"
+                style={{ fontFamily: 'Satisfy, cursive' }}
+              >
+                Chef Pâtissier
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</main>
+    </main>
 
         <section className="bg-white py-16">
           <div className="container mx-auto px-4 max-w-4xl">
