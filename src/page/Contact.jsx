@@ -23,87 +23,106 @@ const ContactPage = () => {
   };
 
   return (
-    
-    <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md">
-      <h1 className="text-4xl font-extrabold text-center text-pink-800 mb-8">Contactez-nous</h1>
-      <div className="bg-white p-6 rounded-lg shadow-md">
-      <div className="mb-8">
-      <h2 className="text-2xl font-bold text-pink-800 mb-4">Nos coordonnées</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className=" p-4 rounded-lg ">
-            <h3 className="font-bold text-gray-800">Téléphone</h3>
-            <p className="text-gray-600 text-sm">+33 1 23 45 67 89</p>
-          </div>
-          <div className=" p-4 rounded-lg ">
-            <h3 className="font-bold text-gray-800">Email</h3>
-            <p className="text-gray-600 text-sm">contact@example.com</p>
-          </div>
-          <div className="p-4 rounded-lg ">
-            <h3 className="font-bold text-gray-800">Adresse postale</h3>
-            <p className="text-gray-600 text-sm">123 Rue de Exemple, 75000 Paris, France</p>
-          </div>
-        </div>
-        </div>
-        
-      </div>
-    
-      
+    <div className="container mx-auto px-4 py-16 max-w-4xl">
+      <h1 className="text-4xl md:text-5xl text-[#2C2C2C] font-serif text-center mb-12">
+        Votre idée, notre gâteau
+      </h1>
 
-      
-      
-      <div className="bg-white shadow-lg rounded-lg overflow-hidden mt-8">
-          <div className="p-6">
-            <h2 className="text-2xl font-bold text-pink-800 mb-6 text-center">Formulaire de contact</h2>
-            <form>
-              <div className="mb-4">
-                <label htmlFor="name" className="block text-gray-700 font-bold mb-2">
-                  Nom
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label htmlFor="email" className="block text-gray-700 font-bold mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label htmlFor="message" className="block text-gray-700 font-bold mb-2">
-                  Demande
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
-                  required
-                ></textarea>
-              </div>
-              <div className="text-center">
-                <button
-                  type="submit"
-                  className="bg-pink-800 text-white font-bold py-2 px-4 rounded-md hover:bg-pink-700 transition duration-300"
-                >
-                  Envoyer
-                </button>
-              </div>
-            </form>
+      <div className="bg-[#FCF8ED] p-8 rounded-lg shadow-md mb-12 transform hover:scale-105 transition-transform duration-300">
+        <h2 className="text-2xl font-serif text-[#2C2C2C] mb-8 text-center">Nos coordonnées</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="flex flex-col items-center p-4 bg-white rounded-lg shadow-sm">
+            <h3 className="font-serif text-[#2C2C2C] font-bold mb-2">Téléphone</h3>
+            <p className="text-gray-600">+33 1 23 45 67 89</p>
+          </div>
+          <div className="flex flex-col items-center p-4 bg-white rounded-lg shadow-sm">
+            <h3 className="font-serif text-[#2C2C2C] font-bold mb-2">Email</h3>
+            <p className="text-gray-600">contact@example.com</p>
+          </div>
+          <div className="flex flex-col items-center p-4 bg-white rounded-lg shadow-sm">
+            <h3 className="font-serif text-[#2C2C2C] font-bold mb-2">Adresse postale</h3>
+            <p className="text-gray-600 text-center">123 Rue de Exemple, 75000 Paris, France</p>
           </div>
         </div>
       </div>
+
+      <div className="bg-[#FCF8ED] p-8 rounded-lg shadow-md">
+        <h2 className="text-2xl font-serif text-[#2C2C2C] mb-8 text-center">
+          Formulaire de contact
+        </h2>
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label htmlFor="firstName" className="block text-[#2C2C2C] font-serif mb-2">
+                Prénom
+              </label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B4513] transition-all duration-300"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="lastName" className="block text-[#2C2C2C] font-serif mb-2">
+                Nom
+              </label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B4513] transition-all duration-300"
+                required
+              />
+            </div>
+          </div>
+          
+          <div>
+            <label htmlFor="phone" className="block text-[#2C2C2C] font-serif mb-2">
+              Téléphone
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B4513] transition-all duration-300"
+              required
+            />
+          </div>
+
+          <div>
+            <label htmlFor="message" className="block text-[#2C2C2C] font-serif mb-2">
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              rows={4}
+              className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B4513] transition-all duration-300 resize-none"
+              required
+            ></textarea>
+          </div>
+
+          <div className="text-center">
+            <button
+              type="submit"
+              className="bg-[#2C2C2C] text-white font-serif py-3 px-8 rounded-lg hover:bg-[#8B4513] transition-colors duration-300"
+            >
+              Envoyer
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
   );
 };
-
 export default ContactPage;
